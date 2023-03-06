@@ -217,6 +217,8 @@
         }
         return;
     }
+    NSLog(error.code);
+    print(error.code);
     [self handleErrors:error flutterArguments:arguments withFlutterResult:result];
   }
 }
