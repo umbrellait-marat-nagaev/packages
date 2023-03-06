@@ -198,13 +198,11 @@
   } else {
     switch (error.code) {
       case LAErrorBiometryNotAvailable:
-        result(@NO);
       case LAErrorBiometryNotEnrolled:
       case LAErrorBiometryLockout:
       case LAErrorUserFallback:
       case LAErrorPasscodeNotSet:
       case LAErrorUserCancel:
-        result(@NO);
       case LAErrorAuthenticationFailed:
         [self handleErrors:error flutterArguments:arguments withFlutterResult:result];
         return;
@@ -227,6 +225,8 @@
      flutterArguments:(NSDictionary *)arguments
     withFlutterResult:(FlutterResult)result {
   NSString *errorCode = @"NotAvailable";
+    NSLog('authError.code1 - \(authError.code)');
+    print('authError.code2 - \(authError.code)');
   switch (authError.code) {
     case LAErrorPasscodeNotSet:
     case LAErrorBiometryNotEnrolled:
