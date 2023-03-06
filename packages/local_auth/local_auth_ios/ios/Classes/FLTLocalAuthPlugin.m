@@ -198,6 +198,7 @@
   } else {
     switch (error.code) {
       case LAErrorBiometryNotAvailable:
+        result(@NO);
       case LAErrorBiometryNotEnrolled:
       case LAErrorBiometryLockout:
       case LAErrorUserFallback:
