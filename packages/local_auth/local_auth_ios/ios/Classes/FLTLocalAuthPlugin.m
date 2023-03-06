@@ -202,6 +202,8 @@
       case LAErrorBiometryLockout:
       case LAErrorUserFallback:
       case LAErrorPasscodeNotSet:
+      case LAErrorUserCancel:
+        result(@NO);
       case LAErrorAuthenticationFailed:
         [self handleErrors:error flutterArguments:arguments withFlutterResult:result];
         return;
