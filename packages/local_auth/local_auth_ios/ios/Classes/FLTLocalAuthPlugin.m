@@ -253,6 +253,7 @@
     NSLog(@"Error: %@ %@", authError, [authError userInfo]);
   switch (authError.code) {
     case LAErrorAuthenticationFailed:
+    case -3:
       errorCode = @"AuthenticationFailed" ;
       break;
     case LAErrorPasscodeNotSet:
