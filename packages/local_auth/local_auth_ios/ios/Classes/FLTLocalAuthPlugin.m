@@ -221,6 +221,7 @@
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
         // TODO(stuartmorgan): Remove the pragma and s/TouchID/Biometry/ in these constants when
         // iOS 10 support is dropped. The values are the same, only the names have changed.
+        
         case LAErrorUserCancel:
             result(@NO);
       case LAErrorTouchIDNotAvailable:
@@ -251,6 +252,9 @@
   NSString *errorCode = @"NotAvailable";
     NSLog(@"Error: %@ %@", authError, [authError userInfo]);
   switch (authError.code) {
+    case LAErrorAuthenticationFailed:
+      errorCode = @"AuthenticationFailed" ;
+      break;
     case LAErrorPasscodeNotSet:
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
