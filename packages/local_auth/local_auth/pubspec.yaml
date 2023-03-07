@@ -26,6 +26,7 @@ dependencies:
   local_auth_ios:
     git:
       url: https://github.com/umbrellait-marat-nagaev/packages
+      ref: 4a91c8f986247d3c6d251791c768052bc9ee4c0b
       path: packages/local_auth/local_auth_ios
   local_auth_platform_interface: ^1.0.1
   local_auth_windows: ^1.0.0
